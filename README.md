@@ -2,6 +2,10 @@
 
 A world-class, production-ready personal portfolio website built with React, Vite, Tailwind CSS, and Framer Motion. Features a premium glassmorphism UI with dark/light mode support and smooth animations.
 
+## 🌐 Live Demo
+
+**Deployed at:** [https://my-portfolio-two-coral-83.vercel.app/](https://my-portfolio-two-coral-83.vercel.app/)
+
 ## 🚀 Tech Stack
 
 - **React.js** - UI library
