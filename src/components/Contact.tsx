@@ -227,10 +227,6 @@ const Contact: React.FC = () => {
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
-
-                <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-                  Note: EmailJS configuration required. Set up environment variables for the contact form to work.
-                </p>
               </form>
             </Card>
           </motion.div>

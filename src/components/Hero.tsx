@@ -42,10 +42,13 @@ const Hero: React.FC = () => {
     return () => clearTimeout(timer)
   }, [text, isDeleting, loopNum, typingSpeed, phrases])
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId: string, e?: React.MouseEvent) => {
+    if (e) e.preventDefault()
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      console.error(`Element with id "${sectionId}" not found`)
     }
   }
 
@@ -114,7 +117,7 @@ const Hero: React.FC = () => {
               transition={{ delay: 1 }}
             >
               <Button
-                onClick={() => scrollToSection('projects')}
+                onClick={(e) => scrollToSection('projects', e)}
                 size="md"
                 className="flex-1 sm:flex-none"
               >
@@ -133,7 +136,7 @@ const Hero: React.FC = () => {
               <Button
                 variant="secondary"
                 size="md"
-                onClick={() => scrollToSection('contact')}
+                onClick={(e) => scrollToSection('contact', e)}
                 className="flex-1 sm:flex-none"
               >
                 Contact Me
